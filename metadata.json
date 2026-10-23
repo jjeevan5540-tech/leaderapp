@@ -1,0 +1,7 @@
+{
+  "name": "Leader Portal",
+  "description": "Leader Portal Console for managing constituent tickets, viewing overview stats, filtering, contacting citizens, and resolving issues.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
