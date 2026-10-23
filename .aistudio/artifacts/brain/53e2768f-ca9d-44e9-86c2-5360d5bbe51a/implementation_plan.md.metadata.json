@@ -1,0 +1,6 @@
+{
+  "summary": "Implementation plan for extracting both the 512x512 PNG app icon artifact and the vector app logo drawable without modifying source code.",
+  "updatedAt": "2026-10-16T11:57:05.825131425Z",
+  "requestFeedback": true,
+  "userFacing": true
+}
