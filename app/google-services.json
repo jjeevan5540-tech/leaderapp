@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "5141901822",
+    "project_id": "ticket-portal-dca26",
+    "storage_bucket": "ticket-portal-dca26.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5141901822:android:49cea597724fc7948650af",
+        "android_client_info": {
+          "package_name": "com.vervenest.leaderportal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlvhdZhBzgivti51xeXswr4NO0co3TVQA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

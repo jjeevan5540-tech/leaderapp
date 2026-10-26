@@ -1,0 +1,84 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Leader & Admin Collections
+    match /admins/{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+    match /admin_credentials/{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+    match /leader_credentials/{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+    match /leader_logins/{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+
+    // PA Credentials & Users Collections
+    match /pa_credentials/{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+    match /pa_users/{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+    match /pa_logins/{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+    match /users/{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+
+    // Session Revocation & Tokens Collections
+    match /pa_sessions/{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+    match /revoked_credentials/{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+    match /pa_tokens/{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+    match /active_sessions/{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+
+    // Constituency Ticket & Request Collections
+    match /tickets/{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+    match /Tickets/{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+    match /grievances/{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+    match /requests/{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+    match /issues/{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+    match /complaints/{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+    match /citizen_tickets/{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+    match /pa_tickets/{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+
+    // Default fallback rule requiring authentication across all other documents
+    match /{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+  }
+}
+
