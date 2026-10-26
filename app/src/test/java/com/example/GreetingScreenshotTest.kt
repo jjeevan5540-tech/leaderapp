@@ -1,9 +1,9 @@
-package com.example
+package com.leaderportal
 
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onRoot
-import com.example.ui.screens.LoginScreen
-import com.example.ui.theme.MyApplicationTheme
+import com.leaderportal.ui.screens.LoginScreen
+import com.leaderportal.ui.theme.MyApplicationTheme
 import com.github.takahirom.roborazzi.RobolectricDeviceQualifiers
 import com.github.takahirom.roborazzi.captureRoboImage
 import org.junit.Rule

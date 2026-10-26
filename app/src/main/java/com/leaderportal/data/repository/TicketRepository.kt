@@ -1,17 +1,16 @@
-package com.example.data.repository
+package com.leaderportal.data.repository
 
 import android.content.Context
-import com.example.data.local.TicketDao
-import com.example.data.model.ChatMessageEntity
-import com.example.data.model.PaUserEntity
-import com.example.data.model.TicketEntity
-import com.example.data.model.TimelineEventEntity
-import com.example.data.remote.FirestoreTicketSyncService
+import com.leaderportal.data.local.TicketDao
+import com.leaderportal.data.model.ChatMessageEntity
+import com.leaderportal.data.model.PaUserEntity
+import com.leaderportal.data.model.TicketEntity
+import com.leaderportal.data.model.TimelineEventEntity
+import com.leaderportal.data.remote.FirestoreTicketSyncService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
-import java.util.concurrent.TimeUnit
 
 class TicketRepository(
     private val ticketDao: TicketDao,
@@ -110,7 +109,7 @@ class TicketRepository(
                     }
 
                     mergedReports.sortBy { it.timestamp }
-                    val mergedReportsJson = com.example.data.model.TicketReportJsonHelper.toJson(mergedReports)
+                    val mergedReportsJson = com.leaderportal.data.model.TicketReportJsonHelper.toJson(mergedReports)
 
                     val bestCitizenName = list.map { it.citizenName.trim() }
                         .firstOrNull {
@@ -161,7 +160,7 @@ class TicketRepository(
 
         val normEnteredNumber = normalizeTicketNumber(customTicketNumber)
 
-        val newReport = com.example.data.model.TicketReportEntry(
+        val newReport = com.leaderportal.data.model.TicketReportEntry(
             paName = assignedPa.ifBlank { "PA" },
             category = if (category.contains("Personal", ignoreCase = true)) "Personal" else "Issue",
             subject = subCategory.ifBlank { if (category.contains("Personal", ignoreCase = true)) "Personal Request" else "Public Issue" },
@@ -223,7 +222,7 @@ class TicketRepository(
                 r.entryType.equals(reportWithNumber.entryType, ignoreCase = true)
             }
             val updatedReports = if (isDuplicate) currentReports else (currentReports + reportWithNumber)
-            val updatedReportsJson = com.example.data.model.TicketReportJsonHelper.toJson(updatedReports)
+            val updatedReportsJson = com.leaderportal.data.model.TicketReportJsonHelper.toJson(updatedReports)
 
             // Reopen ticket if it was closed
             val wasClosed = existingTicket.isSolved
@@ -285,7 +284,7 @@ class TicketRepository(
         }
 
         val initialReports = listOf(newReport)
-        val reportsJson = com.example.data.model.TicketReportJsonHelper.toJson(initialReports)
+        val reportsJson = com.leaderportal.data.model.TicketReportJsonHelper.toJson(initialReports)
 
         val ticket = TicketEntity(
             ticketCode = formattedCode,

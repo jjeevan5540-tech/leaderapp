@@ -1,4 +1,4 @@
-package com.example.ui.screens
+package com.leaderportal.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
@@ -46,23 +45,23 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
-import com.example.data.model.ChatMessageEntity
-import com.example.data.model.TicketEntity
-import com.example.data.model.TimelineEventEntity
-import com.example.ui.components.CategoryBadge
-import com.example.ui.components.StatusBadge
-import com.example.ui.theme.BrandGold
-import com.example.ui.theme.BrandNavy
-import com.example.ui.theme.BrandYellowAccent
-import com.example.ui.theme.LeaderNavy
-import com.example.ui.theme.NeutralDark
-import com.example.ui.theme.SolvedGreen
-import com.example.ui.theme.SolvedGreenBg
-import com.example.ui.theme.SolvedGreenBorder
-import com.example.ui.theme.SurfaceBorder
-import com.example.ui.theme.UnsolvedRed
-import com.example.ui.theme.UnsolvedRedBg
-import com.example.ui.theme.UnsolvedRedBorder
+import com.leaderportal.data.model.ChatMessageEntity
+import com.leaderportal.data.model.TicketEntity
+import com.leaderportal.data.model.TimelineEventEntity
+import com.leaderportal.ui.components.CategoryBadge
+import com.leaderportal.ui.components.StatusBadge
+import com.leaderportal.ui.theme.BrandGold
+import com.leaderportal.ui.theme.BrandNavy
+import com.leaderportal.ui.theme.BrandYellowAccent
+import com.leaderportal.ui.theme.LeaderNavy
+import com.leaderportal.ui.theme.NeutralDark
+import com.leaderportal.ui.theme.SolvedGreen
+import com.leaderportal.ui.theme.SolvedGreenBg
+import com.leaderportal.ui.theme.SolvedGreenBorder
+import com.leaderportal.ui.theme.SurfaceBorder
+import com.leaderportal.ui.theme.UnsolvedRed
+import com.leaderportal.ui.theme.UnsolvedRedBg
+import com.leaderportal.ui.theme.UnsolvedRedBorder
 
 @Composable
 fun TicketDetailDialog(

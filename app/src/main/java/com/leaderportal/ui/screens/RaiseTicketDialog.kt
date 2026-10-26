@@ -1,4 +1,4 @@
-package com.example.ui.screens
+package com.leaderportal.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -28,7 +28,6 @@ import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -46,13 +45,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
-import com.example.ui.theme.BrandGold
-import com.example.ui.theme.BrandNavy
-import com.example.ui.theme.BrandYellowAccent
-import com.example.ui.theme.IssueBlue
-import com.example.ui.theme.LeaderNavy
-import com.example.ui.theme.NeutralDark
-import com.example.ui.theme.PersonalPurple
+import com.leaderportal.ui.theme.BrandGold
+import com.leaderportal.ui.theme.BrandNavy
+import com.leaderportal.ui.theme.IssueBlue
+import com.leaderportal.ui.theme.LeaderNavy
+import com.leaderportal.ui.theme.NeutralDark
+import com.leaderportal.ui.theme.PersonalPurple
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

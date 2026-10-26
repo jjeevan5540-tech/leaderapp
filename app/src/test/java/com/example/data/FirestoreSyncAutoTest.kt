@@ -1,13 +1,13 @@
-package com.example.data
+package com.leaderportal.data
 
 import android.content.Context
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
-import com.example.data.local.AppDatabase
-import com.example.data.local.TicketDao
-import com.example.data.model.PaUserEntity
-import com.example.data.model.TicketEntity
-import com.example.data.remote.FirestoreTicketMapper
+import com.leaderportal.data.local.AppDatabase
+import com.leaderportal.data.local.TicketDao
+import com.leaderportal.data.model.PaUserEntity
+import com.leaderportal.data.model.TicketEntity
+import com.leaderportal.data.remote.FirestoreTicketMapper
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import org.junit.After
@@ -276,7 +276,7 @@ class FirestoreSyncAutoTest {
 
     @Test
     fun `test auto sync deletes data in leader portal when ticket is deleted from firestore`() = runBlocking {
-        val syncService = com.example.data.remote.FirestoreTicketSyncService(ticketDao, null)
+        val syncService = com.leaderportal.data.remote.FirestoreTicketSyncService(ticketDao, null)
 
         // Given: 2 tickets in the local database
         val ticket1 = TicketEntity(

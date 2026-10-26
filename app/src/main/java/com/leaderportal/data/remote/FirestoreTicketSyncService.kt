@@ -1,9 +1,9 @@
-package com.example.data.remote
+package com.leaderportal.data.remote
 
 import android.util.Log
-import com.example.data.local.TicketDao
-import com.example.data.model.PaUserEntity
-import com.example.data.model.TicketEntity
+import com.leaderportal.data.local.TicketDao
+import com.leaderportal.data.model.PaUserEntity
+import com.leaderportal.data.model.TicketEntity
 import com.google.firebase.Timestamp
 import com.google.firebase.firestore.DocumentChange
 import com.google.firebase.firestore.DocumentSnapshot
@@ -556,7 +556,7 @@ object FirestoreTicketMapper {
             reportsJsonFromMap
         } else when (val rList = data["reports"] ?: data["issues"] ?: data["submissions"] ?: data["entries"] ?: data["history"]) {
             is List<*> -> {
-                val entries = mutableListOf<com.example.data.model.TicketReportEntry>()
+                val entries = mutableListOf<com.leaderportal.data.model.TicketReportEntry>()
                 for (item in rList) {
                     if (item is Map<*, *>) {
                         val pa = item["paName"]?.toString()
@@ -582,7 +582,7 @@ object FirestoreTicketMapper {
                         }
                         val issueNum = (item["issueNumber"] ?: item["issue_number"] ?: item["serialNumber"])?.toString()?.toIntOrNull() ?: 0
                         entries.add(
-                            com.example.data.model.TicketReportEntry(
+                            com.leaderportal.data.model.TicketReportEntry(
                                 paName = pa,
                                 category = cat,
                                 subject = sub,
@@ -594,7 +594,7 @@ object FirestoreTicketMapper {
                         )
                     }
                 }
-                if (entries.isNotEmpty()) com.example.data.model.TicketReportJsonHelper.toJson(entries) else ""
+                if (entries.isNotEmpty()) com.leaderportal.data.model.TicketReportJsonHelper.toJson(entries) else ""
             }
             else -> ""
         }
@@ -790,7 +790,7 @@ class FirestoreTicketSyncService(
                                     r.copy(paName = name)
                                 } else r
                             }
-                            val updatedJson = com.example.data.model.TicketReportJsonHelper.toJson(updatedReports)
+                            val updatedJson = com.leaderportal.data.model.TicketReportJsonHelper.toJson(updatedReports)
                             ticketDao.updateTicket(t.copy(assignedPa = name, reportsJson = updatedJson))
                         }
                     }
@@ -896,7 +896,7 @@ class FirestoreTicketSyncService(
                                         }
                                         val combined = (localTicket.reports + remoteTicket.reports)
                                             .distinctBy { it.id to it.timestamp }
-                                        val mergedJson = com.example.data.model.TicketReportJsonHelper.toJson(combined)
+                                        val mergedJson = com.leaderportal.data.model.TicketReportJsonHelper.toJson(combined)
 
                                         val bestCitizenName = if (
                                             remoteTicket.citizenName.isNotBlank() &&
@@ -1627,7 +1627,7 @@ class FirestoreTicketSyncService(
                         }
                         val combined = (localTicket.reports + remoteTicket.reports)
                             .distinctBy { it.id to it.timestamp }
-                        val mergedJson = com.example.data.model.TicketReportJsonHelper.toJson(combined)
+                        val mergedJson = com.leaderportal.data.model.TicketReportJsonHelper.toJson(combined)
                         ticketDao.updateTicket(
                             remoteTicket.copy(
                                 id = localTicket.id,
@@ -1651,7 +1651,7 @@ class FirestoreTicketSyncService(
                             }
                             val combined = (existingUnsolved.reports + remoteTicket.reports)
                                 .distinctBy { it.id to it.timestamp }
-                            val mergedJson = com.example.data.model.TicketReportJsonHelper.toJson(combined)
+                            val mergedJson = com.leaderportal.data.model.TicketReportJsonHelper.toJson(combined)
                             ticketDao.updateTicket(
                                 existingUnsolved.copy(
                                     description = remoteTicket.description.ifBlank { existingUnsolved.description },

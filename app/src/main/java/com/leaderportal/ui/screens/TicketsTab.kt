@@ -1,9 +1,7 @@
-package com.example.ui.screens
+package com.leaderportal.ui.screens
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -19,7 +17,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Assignment
@@ -35,10 +32,8 @@ import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FilterChipDefaults
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
@@ -60,28 +55,25 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.data.model.TicketEntity
-import com.example.ui.components.TicketCardItem
-import com.example.ui.components.TicketTableHeader
-import com.example.ui.components.TicketTableRow
-import com.example.ui.components.contactCitizenByPhone
-import com.example.ui.theme.BrandGold
-import com.example.ui.theme.BrandNavy
-import com.example.ui.theme.BrandYellowAccent
-import com.example.ui.theme.IssueBlue
-import com.example.ui.theme.LeaderGold
-import com.example.ui.theme.LeaderNavy
-import com.example.ui.theme.NeutralDark
-import com.example.ui.theme.NeutralMedium
-import com.example.ui.theme.PersonalPurple
-import com.example.ui.theme.SolvedGreen
-import com.example.ui.theme.SurfaceBorder
-import com.example.ui.theme.UnsolvedRed
-import com.example.ui.viewmodel.CategoryFilter
-import com.example.ui.viewmodel.DateFilter
-import com.example.ui.viewmodel.SortOrder
-import com.example.ui.viewmodel.StatusFilter
-import com.example.ui.viewmodel.ViewDisplayMode
+import com.leaderportal.data.model.TicketEntity
+import com.leaderportal.ui.components.TicketCardItem
+import com.leaderportal.ui.components.TicketTableHeader
+import com.leaderportal.ui.components.TicketTableRow
+import com.leaderportal.ui.theme.BrandNavy
+import com.leaderportal.ui.theme.IssueBlue
+import com.leaderportal.ui.theme.LeaderGold
+import com.leaderportal.ui.theme.LeaderNavy
+import com.leaderportal.ui.theme.NeutralDark
+import com.leaderportal.ui.theme.NeutralMedium
+import com.leaderportal.ui.theme.PersonalPurple
+import com.leaderportal.ui.theme.SolvedGreen
+import com.leaderportal.ui.theme.SurfaceBorder
+import com.leaderportal.ui.theme.UnsolvedRed
+import com.leaderportal.ui.viewmodel.CategoryFilter
+import com.leaderportal.ui.viewmodel.DateFilter
+import com.leaderportal.ui.viewmodel.SortOrder
+import com.leaderportal.ui.viewmodel.StatusFilter
+import com.leaderportal.ui.viewmodel.ViewDisplayMode
 
 @Composable
 fun TicketsTab(

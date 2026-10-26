@@ -1,4 +1,4 @@
-package com.example.ui.components
+package com.leaderportal.ui.components
 
 import android.content.Context
 import android.content.Intent
@@ -7,7 +7,6 @@ import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -18,14 +17,12 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Call
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Error
-import androidx.compose.material.icons.filled.Message
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.ReportProblem
 import androidx.compose.material.icons.filled.Visibility
@@ -35,12 +32,8 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -52,27 +45,16 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.data.model.TicketEntity
-import com.example.ui.theme.BrandGold
-import com.example.ui.theme.BrandNavy
-import com.example.ui.theme.BrandYellowAccent
-import com.example.ui.theme.IssueBlue
-import com.example.ui.theme.IssueBlueBg
-import com.example.ui.theme.IssueBlueBorder
-import com.example.ui.theme.LeaderNavy
-import com.example.ui.theme.NeutralDark
-import com.example.ui.theme.NeutralMedium
-import com.example.ui.theme.PersonalPurple
-import com.example.ui.theme.PersonalPurpleBg
-import com.example.ui.theme.PersonalPurpleBorder
-import com.example.ui.theme.PriorityHigh
-import com.example.ui.theme.SolvedGreen
-import com.example.ui.theme.SolvedGreenBg
-import com.example.ui.theme.SolvedGreenBorder
-import com.example.ui.theme.SurfaceBorder
-import com.example.ui.theme.UnsolvedRed
-import com.example.ui.theme.UnsolvedRedBg
-import com.example.ui.theme.UnsolvedRedBorder
+import com.leaderportal.data.model.TicketEntity
+import com.leaderportal.ui.theme.BrandGold
+import com.leaderportal.ui.theme.BrandNavy
+import com.leaderportal.ui.theme.BrandYellowAccent
+import com.leaderportal.ui.theme.LeaderNavy
+import com.leaderportal.ui.theme.NeutralDark
+import com.leaderportal.ui.theme.NeutralMedium
+import com.leaderportal.ui.theme.PriorityHigh
+import com.leaderportal.ui.theme.SurfaceBorder
+import com.leaderportal.ui.theme.UnsolvedRed
 
 /**
  * Launch phone dialer safely for Contact action

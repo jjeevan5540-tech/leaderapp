@@ -1,15 +1,15 @@
-package com.example.ui.viewmodel
+package com.leaderportal.ui.viewmodel
 
 import android.app.Application
 import android.content.Context
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.data.local.AppDatabase
-import com.example.data.model.ChatMessageEntity
-import com.example.data.model.PaUserEntity
-import com.example.data.model.TicketEntity
-import com.example.data.model.TimelineEventEntity
-import com.example.data.repository.TicketRepository
+import com.leaderportal.data.local.AppDatabase
+import com.leaderportal.data.model.ChatMessageEntity
+import com.leaderportal.data.model.PaUserEntity
+import com.leaderportal.data.model.TicketEntity
+import com.leaderportal.data.model.TimelineEventEntity
+import com.leaderportal.data.repository.TicketRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.delay
@@ -22,7 +22,6 @@ import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 import java.util.Calendar
 import java.util.concurrent.TimeUnit
 

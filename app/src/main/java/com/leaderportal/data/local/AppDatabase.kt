@@ -1,13 +1,13 @@
-package com.example.data.local
+package com.leaderportal.data.local
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.data.model.ChatMessageEntity
-import com.example.data.model.PaUserEntity
-import com.example.data.model.TicketEntity
-import com.example.data.model.TimelineEventEntity
+import com.leaderportal.data.model.ChatMessageEntity
+import com.leaderportal.data.model.PaUserEntity
+import com.leaderportal.data.model.TicketEntity
+import com.leaderportal.data.model.TimelineEventEntity
 
 @Database(
     entities = [

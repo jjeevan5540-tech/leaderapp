@@ -1,9 +1,8 @@
-package com.example.ui.screens
+package com.leaderportal.ui.screens
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -36,7 +35,6 @@ import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Phone
 import androidx.compose.material.icons.filled.Security
-import androidx.compose.material.icons.filled.Sync
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.AlertDialog
@@ -79,21 +77,18 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
-import com.example.data.model.PaUserEntity
-import com.example.ui.theme.BrandGold
-import com.example.ui.theme.BrandNavy
-import com.example.ui.theme.BrandYellowAccent
-import com.example.ui.theme.LeaderGold
-import com.example.ui.theme.LeaderGoldLight
-import com.example.ui.theme.LeaderNavy
-import com.example.ui.theme.LeaderNavyDark
-import com.example.ui.theme.NeutralDark
-import com.example.ui.theme.NeutralMedium
-import com.example.ui.theme.SolvedGreen
-import com.example.ui.theme.SolvedGreenBg
-import com.example.ui.theme.SurfaceBorder
-import com.example.ui.theme.UnsolvedRed
-import com.example.ui.theme.UnsolvedRedBg
+import com.leaderportal.data.model.PaUserEntity
+import com.leaderportal.ui.theme.BrandGold
+import com.leaderportal.ui.theme.BrandNavy
+import com.leaderportal.ui.theme.BrandYellowAccent
+import com.leaderportal.ui.theme.LeaderNavy
+import com.leaderportal.ui.theme.NeutralDark
+import com.leaderportal.ui.theme.NeutralMedium
+import com.leaderportal.ui.theme.SolvedGreen
+import com.leaderportal.ui.theme.SolvedGreenBg
+import com.leaderportal.ui.theme.SurfaceBorder
+import com.leaderportal.ui.theme.UnsolvedRed
+import com.leaderportal.ui.theme.UnsolvedRedBg
 import kotlin.random.Random
 
 @Composable

@@ -1,8 +1,6 @@
-package com.example.ui.screens
+package com.leaderportal.ui.screens
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -11,12 +9,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ExitToApp
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Key
 import androidx.compose.material3.AlertDialog
@@ -45,12 +41,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.example.R
-import com.example.ui.theme.BrandGold
-import com.example.ui.theme.BrandNavy
-import com.example.ui.theme.BrandYellowAccent
-import com.example.ui.theme.UnsolvedRed
-import com.example.ui.viewmodel.LeaderViewModel
+import com.leaderportal.R
+import com.leaderportal.ui.theme.BrandGold
+import com.leaderportal.ui.theme.BrandNavy
+import com.leaderportal.ui.theme.BrandYellowAccent
+import com.leaderportal.ui.theme.UnsolvedRed
+import com.leaderportal.ui.viewmodel.LeaderViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

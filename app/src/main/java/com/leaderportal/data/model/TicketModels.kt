@@ -1,4 +1,4 @@
-package com.example.data.model
+package com.leaderportal.data.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

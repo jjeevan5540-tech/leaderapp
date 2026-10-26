@@ -4,7 +4,7 @@
 -keepattributes *Annotation*, Signature, InnerClasses, EnclosingMethod, SourceFile, LineNumberTable
 
 # Keep all Data Model classes (Entities, DTOs, Enums)
--keep class com.example.data.model.** { *; }
+-keep class com.leaderportal.data.model.** { *; }
 
 # Room Database Rules
 -keep class * extends androidx.room.RoomDatabase

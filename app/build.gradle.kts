@@ -10,11 +10,11 @@ plugins {
 }
 
 android {
-  namespace = "com.example"
+  namespace = "com.leaderportal"
   compileSdk { version = release(36) { minorApiLevel = 1 } }
 
   defaultConfig {
-    applicationId = "com.leader.portal"
+    applicationId = "com.vervenest.leaderportal"
     minSdk = 24
     targetSdk = 36
     versionCode = 1

@@ -1,4 +1,4 @@
-package com.example.ui.theme
+package com.leaderportal.ui.theme
 
 import android.os.Build
 import androidx.compose.material3.MaterialTheme

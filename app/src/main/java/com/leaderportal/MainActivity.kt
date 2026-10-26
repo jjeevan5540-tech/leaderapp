@@ -1,4 +1,4 @@
-package com.example
+package com.leaderportal
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -12,10 +12,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.example.ui.screens.LeaderDashboardScreen
-import com.example.ui.screens.LoginScreen
-import com.example.ui.theme.MyApplicationTheme
-import com.example.ui.viewmodel.LeaderViewModel
+import com.leaderportal.ui.screens.LeaderDashboardScreen
+import com.leaderportal.ui.screens.LoginScreen
+import com.leaderportal.ui.theme.MyApplicationTheme
+import com.leaderportal.ui.viewmodel.LeaderViewModel
 
 class MainActivity : ComponentActivity() {
 
